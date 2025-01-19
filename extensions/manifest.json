@@ -1,0 +1,20 @@
+{
+    "name": "Super-ping",
+    "version": "0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "src/html/settings.html",
+        "default_icon": "image/test.png"
+    },
+    "description": "can ping super",
+    "content_scripts": [
+        {
+            "js": [
+                "src/js/super-ping.js"
+            ],
+            "matches": [
+                "https://florr.io/*"
+            ]
+        }
+    ]
+}
