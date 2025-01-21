@@ -8,4 +8,3 @@ ws.onopen = () => {
     }))
     console.log('Connected to custom WSS');
 };
-ws.send(JSON.stringify({ type: 'send', content: '' }))
