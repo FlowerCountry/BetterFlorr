@@ -1,3 +1,10 @@
+/*
+ * @Author: FlowerCity qzrobotsnake@gmail.com
+ * @Date: 2025-01-01 12:29:43
+ * @LastEditors: FlowerCity qzrobotsnake@gmail.com
+ * @LastEditTime: 2025-01-21 09:10:14
+ * @FilePath: \BetterFlorr\tampermonkey\super-ping.js
+ */
 // ==UserScript==
 // @name         Florr.io Integrated Monitor & Server Switcher (Improved)
 // @namespace    http://tampermonkey.net/
@@ -1261,12 +1268,12 @@
                 if (b === thisBiome) {
                     for (const [region, obj] of Object.entries(serversObj)) {
                         const serverLine = `<tr><td>『 ${regionToName(region)} 』</td>${Object.keys(obj)
-                                .map(x => {
-                                    const isCurrent = (x === currentServerInfo.serverId);
-                                    const color = isCurrent ? "#29ffa3" : "#ababab";
-                                    return `<td style='min-width:50px'><span style="cursor:pointer; color:${color}" class="server-id" data-id="${x}">${x}</span></td>`;
-                                })
-                                .join(" - ")
+                            .map(x => {
+                                const isCurrent = (x === currentServerInfo.serverId);
+                                const color = isCurrent ? "#29ffa3" : "#ababab";
+                                return `<td style='min-width:50px'><span style="cursor:pointer; color:${color}" class="server-id" data-id="${x}">${x}</span></td>`;
+                            })
+                            .join(" - ")
                             }</tr>`;
                         thisServerArr.push(serverLine);
                     }
