@@ -1,19 +1,38 @@
 {
-    "name": "Super-ping",
+    "name": "BetterFlorr",
     "version": "0.1",
     "manifest_version": 3,
     "action": {
         "default_popup": "src/html/settings.html",
         "default_icon": "image/test.png"
     },
-    "description": "can ping super",
+    "description": "Make a better Florr",
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
     "content_scripts": [
         {
             "js": [
-                "src/js/super-ping.js"
+                "src/js/main.js"
             ],
             "matches": [
-                "https://florr.io/*"
+                "http://panel.flowerrealm.top:59757/test.html"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "src/js/superping.js",
+                "src/js/afk.js",
+                "src/js/main.js",
+                "src/lib/opencv.js",
+                "src/js/afk.png",
+                "src/js/afk.jpg"
+            ],
+            "matches": [
+                "<all_urls>"
             ]
         }
     ]

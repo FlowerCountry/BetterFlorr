@@ -48,7 +48,7 @@
     // 保存原始的 WebSocket 构造函数
     const originalWebSocket = WebSocket;
     let logined = false
-    // 用来存储是否已连接到自定义 WSS 的标志
+    // 用来存储是否已连接到自定义 WsSS 的标志
     let connectedToCustomWSS = false;
     // === 新增或修改：增加“防顶号”相关的标志
     let isPreventMultiLoginEnabled = true; // 是否启用防顶号
